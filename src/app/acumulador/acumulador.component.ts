@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-acumulador',
+  templateUrl: './acumulador.component.html',
+  styleUrls: ['./acumulador.component.css']
 })
-export class AppComponent {
+
+export class AcumuladorComponent{
+
   title = 'hola-angular';
   nombre:string = "Ray";
   formacion:string = "Angular";
@@ -42,4 +44,5 @@ export class AppComponent {
         break;
     }
   }
+
 }
