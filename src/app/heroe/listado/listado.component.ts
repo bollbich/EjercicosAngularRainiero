@@ -51,8 +51,4 @@ RecargarHeroes():void{
   this.heroes = ['Ironman','Hulk','Spiderman','Thor','batman'];
 }
 
-
-
-
-
 }
