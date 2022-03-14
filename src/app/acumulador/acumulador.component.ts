@@ -44,5 +44,4 @@ export class AcumuladorComponent{
         break;
     }
   }
-
 }

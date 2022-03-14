@@ -1,0 +1,8 @@
+<dir class="col">
+  <h3>Agregar personaje</h3>
+  <hr><form (ngSubmit)="AgregarPersonaje()">
+    <input type="text" name="nombre" placeholder="nombre" [(ngModel)]="nuevo.nombre">
+    <input type="number" name="poder" placeholder="poder" [(ngModel)]="nuevo.poder">
+    <button type="submit">Agregar</button>
+  </form>
+</dir>

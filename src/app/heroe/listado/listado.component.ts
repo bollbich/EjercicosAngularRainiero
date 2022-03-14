@@ -12,43 +12,33 @@ export class ListadoComponent {
 
   heroeborrado:string = '';
 
-BorrarHeroe():void{
+  BorrarHeroe():void{
+    if(this.heroes[this.heroes.length-1]!=null){
+      this.heroeborrado = this.heroes[this.heroes.length-1];
+      this.heroesBorrados.push(this.heroes[this.heroes.length-1]);
+    }
 
-
-
-  if(this.heroes[this.heroes.length-1]!=null){
-    this.heroeborrado = this.heroes[this.heroes.length-1];
-    this.heroesBorrados.push(this.heroes[this.heroes.length-1]);
+    this.heroes.splice(this.heroes.length-1);
   }
 
-  this.heroes.splice(this.heroes.length-1);
-}
-
-BorrarHeroeArriba():void{
-
-
-
-  if(this.heroes[0]!=null){
-    this.heroeborrado = this.heroes[0];
-    this.heroesBorrados.push(this.heroes[0]);
+  BorrarHeroeArriba():void{
+    if(this.heroes[0]!=null){
+      this.heroeborrado = this.heroes[0];
+      this.heroesBorrados.push(this.heroes[0]);
+    }
+    this.heroes.shift();
   }
 
-
-  this.heroes.shift();
-}
-BorrarHeroeAbajo():void{
-
-
-
-  if(this.heroes[this.heroes.length-1]!=null){
-    this.heroeborrado = this.heroes[this.heroes.length-1];
-    this.heroesBorrados.push(this.heroes[this.heroes.length-1]);
+  BorrarHeroeAbajo():void{
+    if(this.heroes[this.heroes.length-1]!=null){
+      this.heroeborrado = this.heroes[this.heroes.length-1];
+      this.heroesBorrados.push(this.heroes[this.heroes.length-1]);
+    }
+    this.heroes.pop();
   }
-  this.heroes.pop();
-}
 
-RecargarHeroes():void{
-  this.heroes = ['Ironman','Hulk','Spiderman','Thor','batman'];
-}
+  RecargarHeroes():void{
+    this.heroes = ['Ironman','Hulk','Spiderman','Thor','batman'];
+  }
 
 }
